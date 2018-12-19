@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.css";
 
-function BettyCard() {
+function DebbieCard() {
   return (
     <div className="card">
       <div className="img-container">
         <img
-          alt="Debby Eagan"
+          alt="Debbie Eagan"
           src="https://vignette.wikia.nocookie.net/glow/images/a/a6/Debbie_Eagan.jpg/revision/latest?cb=20170710105313"
         />
       </div>
@@ -14,4 +14,4 @@ function BettyCard() {
   );
 }
 
-export default BettyCard;
+export default DebbieCard;
