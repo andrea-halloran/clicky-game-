@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
     font-family: sans-serif;
   }
@@ -8,4 +8,10 @@
     margin: 0;
     height: 100%;
   }
-  
+   */
+
+   body {
+    padding: 0;
+    margin: 0 0;
+    font-family: sans-serif;
+  }
