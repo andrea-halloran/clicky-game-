@@ -4,13 +4,10 @@ import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
 // When I remove this, the app breaks, but if I keep this in here, it works. Nothing is in the Title index.js file??
 // import Title from "./components/Title";
-import Container from "./Container";
-import Row from "./Row";
-import Column from "./Column";
 import friends from "./friends.json";
 import "./index.css";
 
-// Random shuffle
+// shuffle
 function randomFriends(array) {
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
@@ -20,7 +17,7 @@ function randomFriends(array) {
 };
 
 class App extends Component {
-  // Set this.state
+  
   state = {
     friends,
     currentScore: 0,
@@ -48,7 +45,7 @@ class App extends Component {
       this.setState({ topScore: newScore });
     }
     else if (newScore === 12) {
-      this.setState({ correctIncorrect: "You win!" });
+      this.setState({ correctIncorrect: "Winner!" });
     }
     this.handleShuffle();
   };
@@ -77,11 +74,7 @@ class App extends Component {
           topScore={this.state.topScore}
           correctIncorrect={this.state.correctIncorrect}
         />
-
-        <Container>
-          <Row>
             {this.state.friends.map(friend => (
-              <Column size="md-3 sm-6">
                 <FriendCard
                   key={friend.id}
                   handleClick={this.handleClick}
@@ -91,10 +84,9 @@ class App extends Component {
                   id={friend.id}
                   image={friend.image}
                 />
-              </Column>
+            
             ))}
-          </Row>
-        </Container>
+         
       </Wrapper>
     );
   }
